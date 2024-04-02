@@ -22,7 +22,7 @@ test:
 
 production:
   adapter: postgresql
-  database: votre_nom_unique_de_l'application_db
+  database: ror_next_u_db
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: votre_nom_unique_de_l'application
+  username: ror_next_u
   password: <%= ENV['DATABASE_PASSWORD'] %>
