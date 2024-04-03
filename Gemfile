@@ -44,6 +44,9 @@ gem "bootsnap", require: false
 gem "haml-rails", "~> 2.0"
 gem "html2haml"
 
+gem "devise"
+gem 'devise-i18n'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -56,6 +59,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
+  # [https://github.com/ctran/annotate_models]
   gem 'annotate'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]

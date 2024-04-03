@@ -1,0 +1,15 @@
+%p
+  %b Brand:
+  = beer.brand
+%p
+  %b Name:
+  = beer.name
+%p
+  %b Cl:
+  = beer.cl
+%p
+  %b Description:
+  = beer.description
+%p
+  %b Notes:
+  = beer.notes.pluck(:value).sum / beer.notes.length

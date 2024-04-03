@@ -1,19 +1,8 @@
 %p#notice= notice
-%p
-  %b Brand:
-  = @beer.brand
-%p
-  %b Name:
-  = @beer.name
-%p
-  %b Cl:
-  = @beer.cl
-%p
-  %b Description:
-  = @beer.description
-%p
-  %b Description:
-  = @beer.notes.first.value
+
+.content
+  = render 'beer', :beer => @beer
+
 
 = link_to 'Edit', edit_beer_path(@beer)
 \|

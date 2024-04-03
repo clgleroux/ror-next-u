@@ -10,4 +10,12 @@
 #
 class Note < ApplicationRecord
   belongs_to :beer
+  MAX_VAL=10
+  MIN_VAL=0
+
+  validates :value, numericality: { in: MIN_VAL..MAX_VAL }
+
+  def to_s
+    value
+  end
 end
