@@ -29,6 +29,10 @@ Things you may want to cover:
 bin/rails db:migrate
 ```
 
+```
+rails db:rollback
+```
+
 ## Start Project
 
 ```
