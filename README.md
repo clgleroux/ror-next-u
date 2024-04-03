@@ -38,3 +38,9 @@ rails db:rollback
 ```
 rails server
 ```
+
+## Annotate
+
+```
+annotate --models
+```

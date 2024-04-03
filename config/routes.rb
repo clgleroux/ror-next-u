@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :notes
+  resources :beers
   resources :trucs
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -8,5 +10,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root 'trucs#index'
+  root 'beers#index'
 end

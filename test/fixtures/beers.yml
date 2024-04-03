@@ -1,0 +1,22 @@
+# == Schema Information
+#
+# Table name: beers
+#
+#  id          :integer          not null, primary key
+#  name        :string
+#  cl          :float
+#  description :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  brand       :string
+#
+
+one:
+  name: MyString
+  cl: 1.5
+  description: MyText
+
+two:
+  name: MyString
+  cl: 1.5
+  description: MyText
