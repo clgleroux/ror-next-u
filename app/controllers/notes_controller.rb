@@ -5,7 +5,7 @@ class NotesController < ApplicationController
 
   # GET /notes or /notes.json
   def index
-    @notes = Note.all
+    @notes = Note.where("user_id = ?", current_user.id)
   end
 
   # GET /notes/1 or /notes/1.json
@@ -24,6 +24,7 @@ class NotesController < ApplicationController
   # POST /notes or /notes.json
   def create
     @note = Note.new(note_params)
+    @note.user_id = current_user.id
 
     respond_to do |format|
       if @note.save
@@ -63,6 +64,10 @@ class NotesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_note
       @note = Note.find(params[:id])
+      
+      unless @note.user_id == current_user.id
+        redirect_to notes_url, alert: "Vous n'avez pas l'autorisation d'accéder à cette note."
+      end 
     end
 
     # Only allow a list of trusted parameters through.

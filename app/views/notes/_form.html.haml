@@ -10,7 +10,7 @@
     = f.label :value
     = f.number_field :value
   .field
-    = f.label :beer_id
-    = f.number_field :beer_id
+    = f.select :beer_id, options_from_collection_for_select(Beer.all, "id", "name"), prompt: "Select beer"
+  
   .actions
     = f.submit 'Save'

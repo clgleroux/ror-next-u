@@ -10,16 +10,18 @@
   %b City:
   = @store.city
 
-%p
-  %b Beer:
-  - @store.beers.each do |beer|
-    %div.py-3 
-      = beer.id
-      |
-      = beer.name
-      = link_to "Show", {controller: "beers", :beer => beer}, class: 'btn'
+- if @store.beers.length > 0
+  %p
+    %b Beer:
+    - @store.beers.each do |beer|
+      %div.py-3 
+        = beer.id
+        |
+        = beer.name
+        = link_to "Show", {controller: "beers", action: 'show', id: beer.id}, class: 'btn btn-primary'
   
 
-= link_to 'Edit', edit_store_path(@store)
-\|
-= link_to 'Back', stores_path
+%div.mt-3
+  = link_to 'Edit', edit_store_path(@store), class: 'btn btn-secondary'
+  \|
+  = link_to 'Back', stores_path, class: 'btn btn-error'

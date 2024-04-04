@@ -1,0 +1,14 @@
+.header
+  .flex.gap-4
+    = link_to 'Store', {controller: "/stores", action: 'index'}, class: 'btn-header'
+    = link_to 'Beer', {controller: "/beers", action: 'index'}, class: 'btn-header'
+    - if current_user
+      = link_to 'Notes', {controller: "/notes", action: 'index'}, class: 'btn-header'
+      
+  .flex.gap-4
+    - if current_user
+      = button_to 'Logout', destroy_user_session_path, method: :delete
+    - else
+      = link_to 'Sign In', 'users/sign_in'
+      |
+      = link_to 'Sign Un', 'users/sign_up'
