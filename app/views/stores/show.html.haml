@@ -10,6 +10,16 @@
   %b City:
   = @store.city
 
+%p
+  %b Beer:
+  - @store.beers.each do |beer|
+    %div.py-3 
+      = beer.id
+      |
+      = beer.name
+      = link_to "Show", {controller: "beers", :beer => beer}, class: 'btn'
+  
+
 = link_to 'Edit', edit_store_path(@store)
 \|
 = link_to 'Back', stores_path

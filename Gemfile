@@ -82,3 +82,4 @@ group :production do
   # Postgres on prod
   gem "pg"
 end
+gem "tailwindcss-rails", "~> 2.3"

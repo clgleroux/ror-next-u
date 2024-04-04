@@ -23,6 +23,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_04_071039) do
   create_table "beers_stores", id: false, force: :cascade do |t|
     t.integer "store_id", null: false
     t.integer "beer_id", null: false
+    t.index ["beer_id"], name: "index_beers_stores_on_beer_id"
+    t.index ["store_id"], name: "index_beers_stores_on_store_id"
   end
 
   create_table "notes", force: :cascade do |t|

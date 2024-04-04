@@ -12,4 +12,4 @@
   = beer.description
 %p
   %b Notes:
-  = beer.notes.pluck(:value).sum / beer.notes.length
+  = beer.notes.length > 0 ? beer.notes.pluck(:value).sum / beer.notes.length : 'None'

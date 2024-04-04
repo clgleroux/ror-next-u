@@ -39,6 +39,10 @@ rails db:rollback
 rails server
 ```
 
+```
+./bin/dev
+```
+
 ## Annotate
 
 ```

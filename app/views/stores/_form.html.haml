@@ -15,5 +15,8 @@
   .field
     = f.label :city
     = f.text_field :city
+
+  = f.select :beer_ids, options_from_collection_for_select(Beer.all, "id", "name"), {:include_blank => false}, multiple: true, prompt: "Select beer"
+
   .actions
     = f.submit 'Save'
