@@ -11,4 +11,6 @@
 #
 class Store < ApplicationRecord
   has_and_belongs_to_many :beers
+
+  belongs_to :director, required: false
 end
