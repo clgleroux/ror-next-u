@@ -6,31 +6,3 @@
     = link_to "New beer", new_beer_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
   #beers.min-w-full
     = render @beers
-
--# %h1 Listing beers
-
--# %table
--#   %thead
--#     %tr
--#       %th Brand
--#       %th Name
--#       %th Cl
--#       %th Description
--#       %th
--#       %th
--#       %th
-
--#   %tbody
--#     - @beers.each do |beer|
--#       %tr
--#         %td= beer.brand
--#         %td= beer.name
--#         %td= beer.cl
--#         %td= beer.description
--#         %td= link_to 'Show', beer
--#         %td= link_to 'Edit', edit_beer_path(beer)
--#         %td= link_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?' }
-
--# %br
-
--# = link_to 'New Beer', new_beer_path

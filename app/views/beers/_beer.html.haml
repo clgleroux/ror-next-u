@@ -19,20 +19,3 @@
     = link_to "Show this beer", beer, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
     = link_to "Edit this beer", edit_beer_path(beer), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
     %hr.mt-6/
-
-
--# %p
--#   %b Brand:
--#   = beer.brand
--# %p
--#   %b Name:
--#   = beer.name
--# %p
--#   %b Cl:
--#   = beer.cl
--# %p
--#   %b Description:
--#   = beer.description
--# %p
--#   %b Notes:
--#   = beer.notes.length > 0 ? beer.notes.pluck(:value).sum / beer.notes.length : 'None'

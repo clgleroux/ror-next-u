@@ -1,6 +1,7 @@
 .header
   .flex.gap-4
     = link_to 'Store', {controller: "/stores", action: 'index'}, class: 'btn-header'
+    = link_to 'Director', {controller: "/directors", action: 'index'}, class: 'btn-header'
     = link_to 'Beer', {controller: "/beers", action: 'index'}, class: 'btn-header'
     - if current_user
       = link_to 'Notes', {controller: "/notes", action: 'index'}, class: 'btn-header'

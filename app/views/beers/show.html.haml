@@ -7,14 +7,3 @@
     .inline-block.ml-2
       = button_to "Destroy this beer", beer_path(@beer), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium"
     = link_to "Back to beers", beers_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
-
-
--# %p#notice= notice
-
--# .content
--#   = render 'beer', :beer => @beer
-
-
--# = link_to 'Edit', edit_beer_path(@beer)
--# \|
--# = link_to 'Back', beers_path
