@@ -1,23 +1,32 @@
-%h1 Listing notes
+.w-full
+  - if notice.present?
+    %p#notice.py-2.px-3.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block= notice
+  .flex.justify-between.items-center
+    %h1.font-bold.text-4xl Notes
+    = link_to "New note", new_note_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
+  #notes.min-w-full
+    = render @notes
 
-%table
-  %thead
-    %tr
-      %th Value
-      %th Beer
-      %th
-      %th
-      %th
+-# %h1 Listing notes
 
-  %tbody
-    - @notes.each do |note|
-      %tr
-        %td= note.value
-        %td= note.beer.name
-        %td= link_to 'Show', note
-        %td= link_to 'Edit', edit_note_path(note)
-        %td= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' }
+-# %table
+-#   %thead
+-#     %tr
+-#       %th Value
+-#       %th Beer
+-#       %th
+-#       %th
+-#       %th
 
-%br
+-#   %tbody
+-#     - @notes.each do |note|
+-#       %tr
+-#         %td= note.value
+-#         %td= note.beer.name
+-#         %td= link_to 'Show', note
+-#         %td= link_to 'Edit', edit_note_path(note)
+-#         %td= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' }
 
-= link_to 'New Note', new_note_path
+-# %br
+
+-# = link_to 'New Note', new_note_path

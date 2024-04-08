@@ -1,7 +1,14 @@
-%h1 Editing beer
+.mx-auto.w-full{:class => "md:w-2/3"}
+  %h1.font-bold.text-4xl Editing beer
+  = render "form", beer: @beer
+  = link_to "Show this beer", @beer, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
+  = link_to "Back to beers", beers_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
 
-= render 'form'
 
-= link_to 'Show', @beer
-\|
-= link_to 'Back', beers_path
+-# %h1 Editing beer
+
+-# = render 'form'
+
+-# = link_to 'Show', @beer
+-# \|
+-# = link_to 'Back', beers_path

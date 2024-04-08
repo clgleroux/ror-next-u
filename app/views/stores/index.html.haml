@@ -1,25 +1,8 @@
-%h1 Listing stores
-
-%table
-  %thead
-    %tr
-      %th Name
-      %th Address
-      %th City
-      %th
-      %th
-      %th
-
-  %tbody
-    - @stores.each do |store|
-      %tr
-        %td= store.name
-        %td= store.address
-        %td= store.city
-        %td= link_to 'Show', store
-        %td= link_to 'Edit', edit_store_path(store)
-        %td= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Store', new_store_path
+.w-full
+  - if notice.present?
+    %p#notice.py-2.px-3.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block= notice
+  .flex.justify-between.items-center
+    %h1.font-bold.text-4xl Stores
+    = link_to "New store", new_store_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
+  #stores.min-w-full
+    = render @stores

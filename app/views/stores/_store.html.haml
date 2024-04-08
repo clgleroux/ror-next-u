@@ -1,0 +1,20 @@
+%div{:id => "#{dom_id store}"}
+  %p.my-5
+    %strong.block.font-medium.mb-1 Name:
+    = store.name
+  %p.my-5
+    %strong.block.font-medium.mb-1 Address:
+    = store.address
+  %p.my-5
+    %strong.block.font-medium.mb-1 City:
+    = store.city
+  %p.my-5
+    %strong.block.font-medium.mb-1 Beers:
+    - store.beer_ids.each do |beer_id|
+      =Beer.find(beer_id).name
+
+  - if action_name != "show"
+    = link_to "Show this store", store, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
+    = link_to "Edit this store", edit_store_path(store), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
+    %hr.mt-6/
+

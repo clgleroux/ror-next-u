@@ -1,27 +1,9 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @store.name
-%p
-  %b Address:
-  = @store.address
-%p
-  %b City:
-  = @store.city
-
-- if @store.beers.length > 0
-  %p
-    %b Beer:
-    - @store.beers.each do |beer|
-      %div.py-3 
-        = beer.id
-        |
-        = beer.name
-        = link_to "Show", {controller: "beers", action: 'show', id: beer.id}, class: 'btn btn-primary'
-  
-
-%div.mt-3
-  = link_to 'Edit', edit_store_path(@store), class: 'btn btn-secondary'
-  \|
-  = link_to 'Back', stores_path, class: 'btn btn-error'
+.mx-auto.w-full.flex{:class => "md:w-2/3"}
+  .mx-auto
+    - if notice.present?
+      %p#notice.py-2.px-3.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block= notice
+    = render @store
+    = link_to "Edit this store", edit_store_path(@store), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
+    .inline-block.ml-2
+      = button_to "Destroy this store", store_path(@store), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium"
+    = link_to "Back to stores", stores_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
