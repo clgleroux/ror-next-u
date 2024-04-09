@@ -16,6 +16,6 @@
     = beer.notes.length > 0 ? beer.notes.pluck(:value).sum / beer.notes.length : 'None'
 
   - if action_name != "show"
-    = link_to "Show this beer", beer, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
-    = link_to "Edit this beer", edit_beer_path(beer), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
+    = link_to I18n.t('beers.show'), beer, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
+    = link_to I18n.t('beers.edit'), edit_beer_path(beer), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
     %hr.mt-6/

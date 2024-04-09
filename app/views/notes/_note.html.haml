@@ -6,6 +6,6 @@
     %strong.block.font-medium.mb-1 Beer:
     = note.beer.name
   - if action_name != "show"
-    = link_to "Show this note", note, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
-    = link_to "Edit this note", edit_note_path(note), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
+    = link_to I18n.t('notes.show'), note, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
+    = link_to I18n.t('notes.edit'), edit_note_path(note), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
     %hr.mt-6/

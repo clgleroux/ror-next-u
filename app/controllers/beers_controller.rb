@@ -25,7 +25,7 @@ class BeersController < ApplicationController
 
     respond_to do |format|
       if @beer.save
-        format.html { redirect_to beer_url(@beer), notice: "Beer was successfully created." }
+        format.html { redirect_to beer_url(I18n.locale, @beer), notice: "Beer was successfully created." }
         format.json { render :show, status: :created, location: @beer }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class BeersController < ApplicationController
   def update
     respond_to do |format|
       if @beer.update(beer_params)
-        format.html { redirect_to beer_url(@beer), notice: "Beer was successfully updated." }
+        format.html { redirect_to beer_url(I18n.locale, @beer), notice: "Beer was successfully updated." }
         format.json { render :show, status: :ok, location: @beer }
       else
         format.html { render :edit, status: :unprocessable_entity }

@@ -25,7 +25,7 @@ class StoresController < ApplicationController
 
     respond_to do |format|
       if @store.save
-        format.html { redirect_to store_url(@store), notice: "Store was successfully created." }
+        format.html { redirect_to store_url(I18n.locale, @store), notice: "Store was successfully created." }
         format.json { render :show, status: :created, location: @store }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class StoresController < ApplicationController
   def update
     respond_to do |format|
       if @store.update(store_params)
-        format.html { redirect_to store_url(@store), notice: "Store was successfully updated." }
+        format.html { redirect_to store_url(I18n.locale, @store), notice: "Store was successfully updated." }
         format.json { render :show, status: :ok, location: @store }
       else
         format.html { render :edit, status: :unprocessable_entity }

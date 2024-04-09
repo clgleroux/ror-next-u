@@ -25,7 +25,7 @@ class DirectorsController < ApplicationController
 
     respond_to do |format|
       if @director.save
-        format.html { redirect_to director_url(@director), notice: "Director was successfully created." }
+        format.html { redirect_to director_url(I18n.locale, @director), notice: "Director was successfully created." }
         format.json { render :show, status: :created, location: @director }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class DirectorsController < ApplicationController
   def update
     respond_to do |format|
       if @director.update(director_params)
-        format.html { redirect_to director_url(@director), notice: "Director was successfully updated." }
+        format.html { redirect_to director_url(I18n.locale, @director), notice: "Director was successfully updated." }
         format.json { render :show, status: :ok, location: @director }
       else
         format.html { render :edit, status: :unprocessable_entity }

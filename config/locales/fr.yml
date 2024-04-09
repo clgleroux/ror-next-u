@@ -1,0 +1,69 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+fr:
+  stores:
+    title: Magasins
+    new: Nouveau magasin
+    show: Voir ce magasin
+    edit: Modifier ce magasin
+    update: Mettre à jour le magasin
+    back: Retour aux magasins
+    create: Créer un magasin
+    destroy: Supprimer ce magasin
+  notes:
+    title: Notes
+    new: Nouvelle note
+    show: Voir cette note
+    edit: Modifier cette note
+    update: Mettre à jour la note
+    back: Retour aux notes
+    create: Créer une note
+    destroy: Supprimer cette note
+  directors:
+    title: Directeurs
+    new: Nouveau directeur
+    show: Voir ce directeur
+    edit: Modifier ce directeur
+    update: Mettre à jour le directeur
+    back: Retour aux directeurs
+    create: Créer un directeur
+    destroy: Supprimer ce directeur
+  beers:
+    title: Bières
+    new: Nouvelle bière
+    show: Voir cette bière
+    edit: Modifier cette bière
+    update: Mettre à jour la bière
+    back: Retour aux bières
+    create: Créer une bière
+    destroy: Supprimer cette bière
+  header:
+    logout: Déconnexion
+    signIn: Connexion
+    signUp: S'inscrire

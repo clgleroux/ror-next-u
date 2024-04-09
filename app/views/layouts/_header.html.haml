@@ -1,15 +1,19 @@
 .header
   .flex.gap-4
-    = link_to 'Store', {controller: "/stores", action: 'index'}, class: 'btn-header'
-    = link_to 'Director', {controller: "/directors", action: 'index'}, class: 'btn-header'
-    = link_to 'Beer', {controller: "/beers", action: 'index'}, class: 'btn-header'
+    = link_to I18n.t('stores.title'), {controller: "/stores", action: 'index'}, class: 'btn-header'
+    = link_to I18n.t('directors.title'), {controller: "/directors", action: 'index'}, class: 'btn-header'
+    = link_to I18n.t('beers.title'), {controller: "/beers", action: 'index'}, class: 'btn-header'
     - if current_user
-      = link_to 'Notes', {controller: "/notes", action: 'index'}, class: 'btn-header'
+      = link_to I18n.t('notes.title'), {controller: "/notes", action: 'index'}, class: 'btn-header'
       
   .flex.gap-4
+    .mr-6.flex.gap-2
+      = link_to 'EN', url_for(locale: 'en'), class: 'btn-header'
+      = link_to 'FR', url_for(locale: 'fr'), class: 'btn-header'
+    
     - if current_user
-      = button_to 'Logout', destroy_user_session_path, method: :delete
+      = button_to I18n.t('header.logout'), destroy_user_session_path, method: :delete
     - else
-      = link_to 'Sign In', 'users/sign_in'
+      = link_to I18n.t('header.signIn'), "/#{I18n.locale}/users/sign_in"
       |
-      = link_to 'Sign Un', 'users/sign_up'
+      = link_to I18n.t('header.signUp'), "/#{I18n.locale}/users/sign_up"

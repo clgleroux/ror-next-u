@@ -28,4 +28,43 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  stores:
+    title: Stores
+    new: New store
+    show: Show this store
+    edit: Edit this store
+    update: Update store
+    back: Back to stores
+    create: Create store
+    destroy: Destroy this store
+  notes:
+    title: Notes
+    new: New note
+    show: Show this note
+    edit: Edit this note
+    update: Update note
+    back: Back to notes
+    create: Create note
+    destroy: Destroy this note
+  directors:
+    title: Directors
+    new: New director
+    show: Show this director
+    edit: Edit this director
+    update: Update director
+    back: Back to directors
+    create: Create director
+    destroy: Destroy this director
+  beers:
+    title: Beers
+    new: New beer
+    show: Show this beer
+    edit: Edit this beer
+    update: Update beer
+    back: Back to beers
+    create: Create beer
+    destroy: Destroy this beer
+  header:
+    logout: Logout
+    signIn: Sign In
+    signUp: Sign Up

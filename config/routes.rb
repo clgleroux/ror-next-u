@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :notes
-  resources :beers
-  resources :trucs
-  resources :stores
-  resources :directors
+  # config/routes.rb
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    resources :notes
+    resources :beers
+    resources :trucs
+    resources :stores
+    resources :directors
+    devise_for :users
+  end
+
+  # root to: 'notes#index'
+  
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -13,5 +20,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root 'beers#index'
+  root to: 'beers#index'
 end

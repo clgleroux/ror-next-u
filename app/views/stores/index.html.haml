@@ -2,7 +2,8 @@
   - if notice.present?
     %p#notice.py-2.px-3.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block= notice
   .flex.justify-between.items-center
-    %h1.font-bold.text-4xl Stores
-    = link_to "New store", new_store_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
+    %h1.font-bold.text-4xl
+      = I18n.t 'stores.title'
+    = link_to I18n.t('stores.new'), new_store_path(I18n.locale), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
   #stores.min-w-full
     = render @stores

@@ -14,7 +14,7 @@
       =Beer.find(beer_id).name
 
   - if action_name != "show"
-    = link_to "Show this store", store, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
-    = link_to "Edit this store", edit_store_path(store), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
+    = link_to I18n.t('stores.show'), store, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
+    = link_to I18n.t('stores.edit'), edit_store_path(store), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
     %hr.mt-6/
 
