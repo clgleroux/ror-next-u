@@ -11,7 +11,7 @@
   %p.my-5
     %strong.block.font-medium.mb-1 Beers:
     - store.beer_ids.each do |beer_id|
-      =Beer.find(beer_id).name
+      = "#{Beer.find(beer_id).brand} - #{Beer.find(beer_id).name}"
 
   - if action_name != "show"
     = link_to I18n.t('stores.show'), store, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
